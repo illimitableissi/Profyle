@@ -72,6 +72,17 @@ const HomePage = () => {
                 </Carousel> 
                 </Col>
                 </Row>
+                <Row>
+                    <Col xs={12} md={4}>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nobis sequi, corporis optio labore nisi sapiente accusamus vitae et quam illo, impedit inventore eveniet voluptatum necessitatibus provident autem incidunt eos.</p>
+                    </Col>
+                    <Col xs={12} md={4}>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nobis sequi, corporis optio labore nisi sapiente accusamus vitae et quam illo, impedit inventore eveniet voluptatum necessitatibus provident autem incidunt eos.</p>
+                    </Col>
+                    <Col xs={12} md={4}>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nobis sequi, corporis optio labore nisi sapiente accusamus vitae et quam illo, impedit inventore eveniet voluptatum necessitatibus provident autem incidunt eos.</p>
+                    </Col>
+                </Row>
             </Container>  
         
         </div>
