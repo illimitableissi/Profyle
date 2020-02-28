@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -15,10 +16,10 @@ mongoose
     // Serve static assets if in production
 if (process.env.NODE_ENV === 'production') {
 	// Set static folder
-	app.use(express.static('profyle/build'));
+	app.use(express.static('profyles/build'));
 
 	app.get('*', (req, res) => {
-		res.sendFile(path.resolve(__dirname, 'profyle', 'build', 'index.html'));
+		res.sendFile(path.resolve(__dirname, 'profyles', 'build', 'index.html'));
 	});
 }
 
