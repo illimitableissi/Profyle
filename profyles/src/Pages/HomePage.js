@@ -26,24 +26,30 @@ const HomePage = () => {
             <Navbar bg="dark" variant="dark" sticky="top">
                 <Navbar.Brand href="#home">Navbar</Navbar.Brand>
                 <Nav className="mr-auto">
+                    <Nav.Link href="#home">Home</Nav.Link>
+                    <Nav.Link href="#showcase">Showcase</Nav.Link>
+                    <Nav.Link href="#information">Information</Nav.Link>
                 </Nav>
                 </Navbar>
                 <br></br>
             <Container fluid>
-                <Row>
-                    <Col xs={12} md={4}>
-                    <Image className="profilePic" src="/images/landscape2.jpg" roundedCircle fluid/>
+                <Row id="home" className="text-center">
+                    <Col>
+                    <h3 className="text-center">Profile Pic Here:</h3>
+                    <Image className="profilePic" src="/images/landscape2.jpg" rounded fluid/>
                     </Col>
-                    <Col xs={12} md={8}>
-                    <h1>Summary</h1>
-                    <hr></hr>
-                    <p>                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nobis sequi, corporis optio labore nisi sapiente accusamus vitae et quam illo, impedit inventore eveniet voluptatum necessitatibus provident autem incidunt eos.</p>
+                </Row>
+                <br></br>
+                <Row className="text-center">
+                    <Col>
+                    <h3 data-aos="fade-up" data-aos-duration="1000">Quick Summary of Yourself:</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nobis sequi, corporis optio labore nisi sapiente accusamus vitae et quam illo, impedit inventore eveniet voluptatum necessitatibus provident autem incidunt eos.</p>
                     </Col>
                 </Row>
                 <hr></hr>
-                <Row>
+                <Row id="showcase">
                     <Col>
-                    <h2 className="text-center">Showcase your photos here:</h2>
+                    <h2 className="text-center" data-aos="fade-up" data-aos-duration="1000">Showcase your photos here:</h2>
                     <br></br>
                 <Carousel>
                     <Carousel.Item>
@@ -63,7 +69,6 @@ const HomePage = () => {
                         src="/images/gray.jpg"
                         alt="Second slide"
                         />
-
                         <Carousel.Caption>
                         <h3>Second slide label</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -84,11 +89,11 @@ const HomePage = () => {
                 <br></br>
                 </Col>
                 </Row>
-                <h2 className="text-center">Your Information:</h2>
+                <h2 className="text-center" data-aos="fade-up" data-aos-duration="1000">Your Information:</h2>
                 <br></br>
-                <Row>
+                <Row id="information">
                     <Col xs={6} md={3}>
-                        <Card border="light">
+                        <Card border="light" data-aos="fade-right" data-aos-duration="2000">
                             <Card.Header>Life Goals</Card.Header>
                                 <Card.Body>
                                     <Card.Text>
@@ -99,7 +104,7 @@ const HomePage = () => {
                         </Card>
                     </Col>
                     <Col xs={6} md={3}>
-                    <Card border="light">
+                    <Card border="light"  data-aos="fade-right" data-aos-duration="2000">
                             <Card.Header>Notable Accomplishments</Card.Header>
                                 <Card.Body>
                                     <Card.Text>
@@ -110,7 +115,7 @@ const HomePage = () => {
                         </Card>
                     </Col>
                     <Col xs={6} md={3}>
-                    <Card border="light">
+                    <Card border="light" data-aos="fade-left" data-aos-duration="2000">
                             <Card.Header>Hobbies</Card.Header>
                                 <Card.Body>
                                     <Card.Text>
@@ -121,7 +126,7 @@ const HomePage = () => {
                         </Card>
                         </Col>
                         <Col xs={6} md={3}>
-                        <Card border="light">
+                        <Card border="light" data-aos="fade-left" data-aos-duration="2000">
                             <Card.Header>Skills</Card.Header>
                                 <Card.Body>
                                     <Card.Text>
