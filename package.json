@@ -1,0 +1,20 @@
+{
+  "name": "Profyle",
+  "version": "1.0.0",
+  "description": "Profyle is a page creation app. Users will be able to register and create their own personal webpage.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/illimitableissi/Profyle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/illimitableissi/Profyle/issues"
+  },
+  "homepage": "https://github.com/illimitableissi/Profyle#readme"
+}
