@@ -3,14 +3,14 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const app = express();
 const path = require('path');
-const db = require('./config/keys').mongoURI;
+// const db = require('./config/keys').mongoURI;
 const router = require("express").Router();
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 mongoose
-	.connect(process.env.MONGODB_URI || db, { useNewUrlParser: true })
+	.connect(process.env.MONGODB_URI || "mongodb://192.168.99.100:27017/profyle", { useNewUrlParser: true })
 	.then(() => console.log('MongoDB successfully connected'))
     .catch(err => console.log(err));
     
