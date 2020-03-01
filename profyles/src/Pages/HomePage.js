@@ -40,7 +40,7 @@ const HomePage = () => {
                 <Row className="text-center">
                     <Col>
                     <h3 data-aos="fade-up" data-aos-duration="1000">Quick Summary of Yourself:</h3>
-                    <Card body>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nobis sequi, corporis optio labore nisi sapiente accusamus vitae et quam illo, impedit inventore eveniet voluptatum necessitatibus provident autem incidunt eos.</Card>
+                    <Card body data-aos="fade-up" data-aos-duration="1000">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nobis sequi, corporis optio labore nisi sapiente accusamus vitae et quam illo, impedit inventore eveniet voluptatum necessitatibus provident autem incidunt eos.</Card>
                     </Col>
                 </Row>
                 <hr></hr>
