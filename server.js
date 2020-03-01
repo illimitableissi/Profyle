@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const app = express();
 const path = require('path');
-const db = require('/config/keys').mongoURI;
+const db = require('./config/keys').mongoURI;
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
