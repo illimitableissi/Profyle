@@ -14,15 +14,13 @@ import './pages.css'
 const HomePage = () => {
     return (
         <div>
-            <Container fluid>
-                <Jumbotron className="text-center">
-                    <h1>Profyle</h1>
-                    <p>Profyle is a quick "About Me" page creation app. </p>
-                    <a href="/form" role="button" className="btn btn-primary">Create Your Page!</a>
-                </Jumbotron>
-                    <h5 className="text-center">Your page Template --></h5>
-                    <hr></hr>
-            </Container>
+            <Jumbotron className="text-center">
+                <h1>Profyle</h1>
+                <p>Profyle is a quick "About Me" page creation app. </p>
+                <a href="/form" role="button" className="btn btn-primary">Create Your Page!</a>
+            </Jumbotron>
+                <h5 className="text-center">Your page Template --></h5>
+                <hr></hr>
             <Navbar bg="dark" variant="dark" sticky="top">
                 <Navbar.Brand href="#home">Navbar</Navbar.Brand>
                 <Nav className="mr-auto">
@@ -31,8 +29,7 @@ const HomePage = () => {
                     <Nav.Link href="#information">Information</Nav.Link>
                 </Nav>
                 </Navbar>
-            <div className="pageWrapper"></div>
-            <Container fluid>
+            <Container fluid className="pageWrapper">
                 <Row id="home" className="text-center">
                     <Col>
                     <h3 className="text-center">Profile Pic Here:</h3>
@@ -43,7 +40,7 @@ const HomePage = () => {
                 <Row className="text-center">
                     <Col>
                     <h3 data-aos="fade-up" data-aos-duration="1000">Quick Summary of Yourself:</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nobis sequi, corporis optio labore nisi sapiente accusamus vitae et quam illo, impedit inventore eveniet voluptatum necessitatibus provident autem incidunt eos.</p>
+                    <Card body>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nobis sequi, corporis optio labore nisi sapiente accusamus vitae et quam illo, impedit inventore eveniet voluptatum necessitatibus provident autem incidunt eos.</Card>
                     </Col>
                 </Row>
                 <hr></hr>
