@@ -31,7 +31,7 @@ const HomePage = () => {
                     <Nav.Link href="#information">Information</Nav.Link>
                 </Nav>
                 </Navbar>
-                <br></br>
+            <div className="pageWrapper"></div>
             <Container fluid>
                 <Row id="home" className="text-center">
                     <Col>
@@ -49,7 +49,7 @@ const HomePage = () => {
                 <hr></hr>
                 <Row id="showcase">
                     <Col>
-                    <h2 className="text-center" data-aos="fade-up" data-aos-duration="1000">Showcase your photos here:</h2>
+                    <h3 className="text-center" data-aos="fade-up" data-aos-duration="1000">Showcase your photos here:</h3>
                     <br></br>
                 <Carousel>
                     <Carousel.Item>
@@ -89,7 +89,7 @@ const HomePage = () => {
                 <br></br>
                 </Col>
                 </Row>
-                <h2 className="text-center" data-aos="fade-up" data-aos-duration="1000">Your Information:</h2>
+                <h3 className="text-center" data-aos="fade-up" data-aos-duration="1000">Your Information:</h3>
                 <br></br>
                 <Row id="information">
                     <Col xs={6} md={3}>
@@ -137,8 +137,7 @@ const HomePage = () => {
                         </Card>
                     </Col>
                 </Row>
-            </Container>  
-        
+            </Container>       
         </div>
     );
 };
