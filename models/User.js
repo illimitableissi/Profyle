@@ -11,6 +11,10 @@ const UserSchema = new Schema({
         type: String,
         required: true,
     },
+    backgroundImg: {
+        type: String,
+        required: false,
+    },
     summary: {
         type: String,
         required: true,

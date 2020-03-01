@@ -2,21 +2,26 @@ const mongoose = require("mongoose");
 const db = require("../models");
 
 mongoose.connect(
-    process.env.MONGODB_URI ||
+    // process.env.MONGODB_URI ||
     "mongodb+srv://iinegbedion:8Q1tHdVLHOCdLCvV@cluster0-uuy8n.azure.mongodb.net/Profyle"
 );
 
 const UserSeed = [{
-    
-
-
+    userName: "",
+    profilePic: "",
+    backgroundImg: "",
+    summary: "",
+    photoUrl: [],
+    goals: "",
+    accomplishments: "",
+    hobbies: "",
+    skills: "",
 }]
 
 
-
-db.Users
+db.User
     .remove({})
-    .then(() => db.Users.collection.insertMany(UserSeed))
+    .then(() => db.User.collection.insertMany(UserSeed))
     .then(data => {
         console.log(data.result.n + " records inserted!");
         process.exit(0);
