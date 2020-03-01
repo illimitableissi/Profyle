@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const path = require('path');
 const db = require('./config/keys').mongoURI;
+const router = require("express").Router();
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
