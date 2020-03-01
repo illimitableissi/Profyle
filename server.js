@@ -2,11 +2,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const app = express();
+const path = require('path');
+const db = require('/config/keys').mongoURI;
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-
-const db = require('./config/keys').mongoURI;
 
 mongoose
 	.connect(process.env.MONGODB_URI || db, { useNewUrlParser: true })
