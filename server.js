@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 mongoose
-	.connect(process.env.MONGODB_URI || "mongodb://192.168.99.100:27017/profyle", { useNewUrlParser: true })
+	.connect(process.env.MONGODB_URI || "mongodb+srv://iinegbedion:8Q1tHdVLHOCdLCvV@cluster0-uuy8n.azure.mongodb.net/Profyle", { useNewUrlParser: true })
 	.then(() => console.log('MongoDB successfully connected'))
     .catch(err => console.log(err));
     
