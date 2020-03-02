@@ -89,7 +89,7 @@ const HomePage = () => {
                 <h3 className="text-center" data-aos="fade-up" data-aos-duration="1000">Your Information:</h3>
                 <br></br>
                 <Row id="information">
-                    <Col xs={6} md={3}>
+                    <Col xs={12} md={3}>
                         <Card border="light" data-aos="fade-right" data-aos-duration="2000">
                             <Card.Header>Life Goals</Card.Header>
                                 <Card.Body>
@@ -100,8 +100,8 @@ const HomePage = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col xs={6} md={3}>
-                    <Card border="light"  data-aos="fade-right" data-aos-duration="2000">
+                    <Col xs={12} md={3}>
+                    <Card border="primary"  data-aos="fade-right" data-aos-duration="2000">
                             <Card.Header>Notable Accomplishments</Card.Header>
                                 <Card.Body>
                                     <Card.Text>
@@ -111,8 +111,8 @@ const HomePage = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col xs={6} md={3}>
-                    <Card border="light" data-aos="fade-left" data-aos-duration="2000">
+                    <Col xs={12} md={3}>
+                    <Card border="success" data-aos="fade-left" data-aos-duration="2000">
                             <Card.Header>Hobbies</Card.Header>
                                 <Card.Body>
                                     <Card.Text>
@@ -122,8 +122,8 @@ const HomePage = () => {
                             </Card.Body>
                         </Card>
                         </Col>
-                        <Col xs={6} md={3}>
-                        <Card border="light" data-aos="fade-left" data-aos-duration="2000">
+                        <Col xs={12} md={3}>
+                        <Card border="danger" data-aos="fade-left" data-aos-duration="2000">
                             <Card.Header>Skills</Card.Header>
                                 <Card.Body>
                                     <Card.Text>
@@ -132,6 +132,12 @@ const HomePage = () => {
                                     </Card.Text>
                             </Card.Body>
                         </Card>
+                    </Col>
+                </Row>
+                <br></br>
+                <Row>
+                    <Col>
+                    <h3 className="text-center">More coming soon...</h3>
                     </Col>
                 </Row>
             </Container>       
