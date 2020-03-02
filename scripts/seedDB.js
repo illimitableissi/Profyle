@@ -11,18 +11,18 @@ const UserSeed = [{
     profilePic: "",
     backgroundImg: "",
     summary: "",
-    photoUrlOne: [{
+    photoUrlOne: {
         url: "",
         caption: ""
-    }],
-    photoUrlTwo: [{
+    },
+    photoUrlTwo: {
         url: "",
         caption: ""
-    }],
-    photoUrlThree: [{
+    },
+    photoUrlThree: {
         url: "",
         caption: ""
-    }],
+    },
     goals: "",
     accomplishments: "",
     hobbies: "",

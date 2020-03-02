@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Button from 'react-bootstrap/Button'
+import Col from 'react-bootstrap/Col'
 
 class UserForm extends React.Component {
     state = {}
@@ -65,30 +66,70 @@ render () {
                              value={this.state.summary}
                             />
                     </Form.Group>
-                    <Form.Group>
-                        <Form.Label>Showcase Photos</Form.Label>
+                    <Form.Row>
+                    <Form.Group as={Col}>
+                        <Form.Label>Photo 1</Form.Label>
                             <Form.Control
                              type="text" 
-                             name="photoUrlOne"
+                             name="photoUrl"
                              placeholder="Photo 1"  
                              onChange={this.handleInputChange}
-                             value={this.state.photoUrlOne}
-                            />
-                        <   Form.Control
-                             type="text" 
-                             name="photoUrlTwo"
-                             placeholder="Photo 2"   
-                             onChange={this.handleInputChange}
-                             value={this.state.photoUrlTwo}
-                            />
-                            <Form.Control 
-                             type="text"
-                             name="photoUrlThree" 
-                             placeholder="Photo 3" 
-                             onChange={this.handleInputChange}
-                             value={this.state.photoUrlThree}
+                            //  value={this.state.photoUrlOne.url}
                             />
                     </Form.Group>
+                    <Form.Group as={Col}>
+                        <Form.Label>Caption</Form.Label>
+                            <Form.Control
+                             type="text" 
+                             name="caption"
+                             placeholder="Photo 1"  
+                             onChange={this.handleInputChange}
+                            //  value={this.state.photoUrlOne.caption}
+                            />
+                    </Form.Group>
+                    </Form.Row>
+                    <Form.Row>
+                    <Form.Group as={Col}>
+                        <Form.Label>Photo 2</Form.Label>
+                            <Form.Control
+                             type="text" 
+                             name="photoUrl"
+                             placeholder="Photo 1"  
+                             onChange={this.handleInputChange}
+                            //  value={this.state.photoUrlOne.url}
+                            />
+                    </Form.Group>
+                    <Form.Group as={Col}>
+                        <Form.Label>Caption</Form.Label>
+                            <Form.Control
+                             type="text" 
+                             name="caption" 
+                             onChange={this.handleInputChange}
+                            //  value={this.state.photoUrlOne.caption}
+                            />
+                    </Form.Group>
+                    </Form.Row>
+                    <Form.Row>
+                    <Form.Group as={Col}>
+                        <Form.Label>Photo 3</Form.Label>
+                            <Form.Control
+                             type="text" 
+                             name="photoUrl"
+                             placeholder="Photo 3"  
+                             onChange={this.handleInputChange}
+                            //  value={this.state.photoUrlOne.url}
+                            />
+                    </Form.Group>
+                    <Form.Group as={Col}>
+                        <Form.Label>Caption</Form.Label>
+                            <Form.Control
+                             type="text" 
+                             name="caption"
+                             onChange={this.handleInputChange}
+                            //  value={this.state.photoUrlOne.caption}
+                            />
+                    </Form.Group>
+                    </Form.Row>
                     <Form.Group>
                         <Form.Label>Life Goals</Form.Label>
                             <Form.Control
