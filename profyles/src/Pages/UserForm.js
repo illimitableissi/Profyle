@@ -24,6 +24,7 @@ render () {
         <div style ={{ background: "#000080"}}>
             <Jumbotron className="text-center">
                 <h2>ENTER YOUR INFORMATION BELOW</h2>
+                <p>(Please enter URLs for all images)</p>
             </Jumbotron>
             <Container style={{background: "white"}}>
                 <Form>
@@ -32,7 +33,6 @@ render () {
                             <Form.Control 
                              type="text"
                              name="userName" 
-                             placeholder="Url" 
                              onChange={this.handleInputChange}
                              value={this.state.userName}
                             />
@@ -42,7 +42,6 @@ render () {
                             <Form.Control
                              type="text" 
                              name="profilePic" 
-                             placeholder="Url" 
                              onChange={this.handleInputChange}
                              value={this.state.userName}
                             />
@@ -52,7 +51,6 @@ render () {
                             <Form.Control
                              type="text" 
                              name="backgroundImg" 
-                             placeholder="Url" 
                              onChange={this.handleInputChange}
                              value={this.state.backgroundImg}
                             />
@@ -118,7 +116,7 @@ render () {
                              name="hobbies" 
                              as="textarea" 
                              onChange={this.handleInputChange}
-                             value={this.state.accomplishments}
+                             value={this.state.hobbies}
                             />
                     </Form.Group>
                     <Form.Group>
