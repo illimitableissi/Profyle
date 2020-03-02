@@ -19,12 +19,18 @@ const UserSchema = new Schema({
         type: String,
         required: true,
     },
-    photoUrl: [{
-        photoUrlOne: String,
-        photoUrlTwo: String,
-        photoUrlThree: String,
-        posted: {type: Date, default: Date.now}
-    }],
+    photoUrlOne: {
+        type: String,
+        required: true,
+    },
+    photoUrlTwo: {
+        type: String,
+        required: true,
+    },
+    photoUrlThree: {
+        type: String,
+        required: true,
+    },
     goals: {
         type: String,
         required: true,

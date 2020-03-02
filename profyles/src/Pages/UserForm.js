@@ -21,16 +21,112 @@ render () {
     return (
         <div>
             <Container>
-            <Form>
-        <Form.Group controlId="formGroupEmail">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
-        </Form.Group>
-        <Form.Group controlId="formGroupPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
-        </Form.Group>
-        </Form>
+                <Form>
+                    <Form.Group>
+                        <Form.Label>Username</Form.Label>
+                            <Form.Control 
+                             type="text"
+                             name="userName" 
+                             placeholder="Url" 
+                             onChange={this.handleInputChange}
+                             value={this.state.userName}
+                            />
+                    </Form.Group>
+                    <Form.Group>
+                        <Form.Label>Profile Picture</Form.Label>
+                            <Form.Control
+                             type="text" 
+                             name="profilePic" 
+                             placeholder="Url" 
+                             onChange={this.handleInputChange}
+                             value={this.state.userName}
+                            />
+                    </Form.Group>
+                    <Form.Group>
+                        <Form.Label>Background Image</Form.Label>
+                            <Form.Control
+                             type="text" 
+                             name="backgroundImg" 
+                             placeholder="Url" 
+                             onChange={this.handleInputChange}
+                             value={this.state.backgroundImg}
+                            />
+                    </Form.Group>
+                    <Form.Group>
+                        <Form.Label>Profile Summary</Form.Label>
+                            <Form.Control
+                             type="text"
+                             as="textarea" 
+                             name="summary" 
+                             onChange={this.handleInputChange}
+                             value={this.state.summary}
+                            />
+                    </Form.Group>
+                    <Form.Group>
+                        <Form.Label>Showcase Photos</Form.Label>
+                            <Form.Control
+                             type="text" 
+                             name="photoUrlOne"
+                             placeholder="Photo 1"  
+                             onChange={this.handleInputChange}
+                             value={this.state.photoUrlOne}
+                            />
+                        <   Form.Control
+                             type="text" 
+                             name="photoUrlTwo"
+                             placeholder="Photo 2"   
+                             onChange={this.handleInputChange}
+                             value={this.state.photoUrlTwo}
+                            />
+                            <Form.Control 
+                             type="text"
+                             name="photoUrlThree" 
+                             placeholder="Photo 3" 
+                             onChange={this.handleInputChange}
+                             value={this.state.photoUrlThree}
+                            />
+                    </Form.Group>
+                    <Form.Group>
+                        <Form.Label>Life Goals</Form.Label>
+                            <Form.Control
+                             type="text" 
+                             name="goals" 
+                             as="textarea" 
+                             onChange={this.handleInputChange}
+                             value={this.state.goals}
+                            />
+                    </Form.Group>
+                    <Form.Group>
+                        <Form.Label>Accomplishments</Form.Label>
+                            <Form.Control 
+                             type="text"
+                             name="accomplishments" 
+                             as="textarea" 
+                             onChange={this.handleInputChange}
+                             value={this.state.accomplishments}
+                            />
+                    </Form.Group>
+                    <Form.Group>
+                        <Form.Label>Hobbies</Form.Label>
+                            <Form.Control 
+                             type="text"
+                             name="hobbies" 
+                             as="textarea" 
+                             onChange={this.handleInputChange}
+                             value={this.state.accomplishments}
+                            />
+                    </Form.Group>
+                    <Form.Group>
+                        <Form.Label>Skills</Form.Label>
+                            <Form.Control 
+                             type="text"
+                             name="skills" 
+                             as="textarea" 
+                             onChange={this.handleInputChange}
+                             value={this.state.skills}
+                            />
+                    </Form.Group>
+                </Form>
             </Container>
         </div>
     );
