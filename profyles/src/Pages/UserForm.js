@@ -1,6 +1,8 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form'
+import Jumbotron from 'react-bootstrap/Jumbotron'
+import Button from 'react-bootstrap/Button'
 
 class UserForm extends React.Component {
     state = {}
@@ -19,8 +21,11 @@ handleInputChange = e => {
 
 render () {
     return (
-        <div>
-            <Container>
+        <div style ={{ background: "#000080"}}>
+            <Jumbotron className="text-center">
+                <h2>ENTER YOUR INFORMATION BELOW</h2>
+            </Jumbotron>
+            <Container style={{background: "white"}}>
                 <Form>
                     <Form.Group>
                         <Form.Label>Username</Form.Label>
@@ -126,6 +131,7 @@ render () {
                              value={this.state.skills}
                             />
                     </Form.Group>
+                    <Button type="submit">Create Profile</Button>
                 </Form>
             </Container>
         </div>
