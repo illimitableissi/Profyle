@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const db = require("../models");
 
 mongoose.connect(
-    // process.env.MONGODB_URI ||
+    process.env.MONGODB_URI ||
     "mongodb+srv://iinegbedion:8Q1tHdVLHOCdLCvV@cluster0-uuy8n.azure.mongodb.net/Profyle"
 );
 
@@ -12,18 +12,12 @@ const userSeed = [
     profilePic: "",
     backgroundImg: "",
     summary: "",
-    photoUrlOne: {
-        url: "",
-        caption: ""
-    },
-    photoUrlTwo: {
-        url: "",
-        caption: ""
-    },
-    photoUrlThree: {
-        url: "",
-        caption: ""
-    },
+    photoUrlOne: "",
+    photoOneCaption: "",
+    photoUrlTwo: "",
+    photoTwoCaption: "",
+    photoUrlThree: "",
+    photoThreeCaption: "",
     goals: "",
     accomplishments: "",
     hobbies: "",
