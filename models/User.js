@@ -21,11 +21,11 @@ const UserSchema = new Schema({
     },
     photoUrlOne: {
         type: String,
-        required: false,
+        required: true,
     },
     photoOneCaption: {
         type: String,
-        required: false,
+        required: true,
     },
     photoUrlTwo: {
         type: String,
@@ -33,7 +33,7 @@ const UserSchema = new Schema({
     },
     photoTwoCaption: {
         type: String,
-        required: false,
+        required: true,
     },
     photoUrlThree: {
         type: String,

@@ -10,7 +10,7 @@ function App() {
       <div>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/form" component={UserForm} />
-        <Route exact path="/username" component={YourPage} />
+        <Route exact path="/users/:username" component={YourPage} />
       </div>
     </Router>
   );

@@ -5,12 +5,13 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import API from '../Utils/API'
+import Modal from 'react-bootstrap/Modal'
 
 class UserForm extends React.Component {
     state = {
-        users: []
+        users: [],
+        show: false
     }
-
 
 componentDidMount() {
     this.loadUsers();
@@ -54,12 +55,23 @@ createUserPage = e => {
     .then(res => this.loadUsers())
     .catch(err => console.log(err));
     console.log("this works")
+    this.setState({ show: true })
 }
 
 
 render () {
     return (
         <div style ={{ background: "#000080"}}>
+            <Modal show={this.state.show}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Your Website Link: </Modal.Title>
+                </Modal.Header>
+                    <Modal.Body>profyle.herokuapp.com/users/{this.state.userName}</Modal.Body>
+                <Modal.Footer>
+                <a href="/" role="button" className=" btn btn-primary">Go to the Homepage</a>
+                <a href={"/users/" + this.state.userName} role="button" className=" btn btn-success">View Your Profyle!</a>
+                </Modal.Footer>
+            </Modal>
             <Jumbotron className="text-center">
                 <h2>ENTER YOUR INFORMATION BELOW</h2>
                 <p>(Please enter URLs for all images)</p>
@@ -117,7 +129,7 @@ render () {
                         <Form.Label>Caption</Form.Label>
                             <Form.Control
                              type="text" 
-                             name="caption"
+                             name="photoOneCaption"
                              onChange={this.handleInputChange}
                              value={this.state.photoOneCaption}
                             />
@@ -137,7 +149,7 @@ render () {
                         <Form.Label>Caption</Form.Label>
                             <Form.Control
                              type="text" 
-                             name="caption" 
+                             name="photoTwoCaption" 
                              onChange={this.handleInputChange}
                              value={this.state.photoTwoCaption}
                             />
@@ -157,7 +169,7 @@ render () {
                         <Form.Label>Caption</Form.Label>
                             <Form.Control
                              type="text" 
-                             name="caption"
+                             name="photoThreeCaption"
                              onChange={this.handleInputChange}
                              value={this.state.photoThreeCaption}
                             />
