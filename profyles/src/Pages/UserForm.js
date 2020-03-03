@@ -45,7 +45,7 @@ createUserPage = e => {
         photoUrlTwo:this.state.photoUrlTwo,
         photoTwoCaption: this.state.photoTwoCaption,
         photoUrlThree: this.state.photoUrlThree,
-        photoThreeCaption: this.state.photoThreeCaption
+        photoThreeCaption: this.state.photoThreeCaption,
         goals: this.state.goals,
         accomplishments: this.state.accomplishments,
         hobbies: this.state.hobbies,
