@@ -4,14 +4,13 @@ const bodyParser = require('body-parser');
 const app = express();
 const path = require('path');
 const routes = require('./routes')
+// const db = require('./config/keys').mongoURI;
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-const db = require('./config/keys').mongoURI;
-
 mongoose
-	.connect(process.env.MONGODB_URI || db, { useNewUrlParser: true })
+	.connect(process.env.MONGODB_URI || "mongodb+srv://iinegbedion:8Q1tHdVLHOCdLCvV@cluster0-uuy8n.azure.mongodb.net/Profyle", { useNewUrlParser: true })
 	.then(() => console.log('MongoDB successfully connected'))
 	.catch(err => console.log(err));
 	
