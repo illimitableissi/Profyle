@@ -14,9 +14,9 @@ import './pages.css'
 const HomePage = () => {
     return (
         <div>
-            <Jumbotron className="text-center">
+            <Jumbotron className="text-center" id="homeJumbo">
                 <h1>Profyle</h1>
-                <p>Profyle is a quick "About Me" page creation app. </p>
+                <h6>Profyle is a quick "About Me" page creation app. </h6>
                 <a href="/form" role="button" className="btn btn-primary">Create Your Page!</a>
             </Jumbotron>
                 <h5 className="text-center">Your page Template --></h5>

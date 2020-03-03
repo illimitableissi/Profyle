@@ -17,7 +17,7 @@
     background-blend-mode: lighten;
 }
 
-h3 {
+h3, h1, h6 {
     color: white;
 }
 
@@ -29,5 +29,12 @@ h3 {
     background-size: cover;
     background-color: rgba(255,255,255,0.4);
     background-blend-mode: lighten;
+}
+
+#homeJumbo {
+    background-image: url(/images/profyle.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 700px
 }
 
