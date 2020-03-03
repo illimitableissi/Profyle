@@ -21,10 +21,8 @@ h3 {
     color: white;
 }
 
-@media screen and (min-width: 480px) {
   
-.pageWrapper {
-    background-image: url(/images/landscape2.jpg);
+.personalWrapper {
     height: 100%;
     background-attachment: fixed;
     background-position: center;
@@ -33,4 +31,3 @@ h3 {
     background-blend-mode: lighten;
 }
 
-}

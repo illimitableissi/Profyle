@@ -34,7 +34,7 @@ render () {
                     <Nav.Link href="#information">Information</Nav.Link>
                 </Nav>
                 </Navbar>
-            <Container fluid className="pageWrapper">
+            <Container fluid className="personalWrapper" style={{ backgroundImage: 'url(' + this.state.user.backgroundImg + ')' }}>
                 <Row id="home" className="text-center">
                     <Col>
                     <Image className="profilePic" src={this.state.user.profilePic} rounded fluid/>
@@ -49,7 +49,7 @@ render () {
                 <hr></hr>
                 <Row id="showcase">
                     <Col>
-                    <h3 className="text-center" data-aos="fade-up" data-aos-duration="1000">Showcase your photos here:</h3>
+                    <h3 className="text-center" data-aos="fade-up" data-aos-duration="1000">Showcase</h3>
                     <br></br>
                 <Carousel>
                     <Carousel.Item>
@@ -129,7 +129,16 @@ render () {
                         </Card>
                     </Col>
                 </Row>
-            </Container>       
+                <br></br>
+            </Container>
+            <Navbar bg="dark" variant="dark" sticky="bottom">
+                <Navbar.Brand href="#home">Profyle</Navbar.Brand>
+                <Nav className="mr-auto">
+                <Navbar.Text>
+           Created by NastyNubianProductionz
+            </Navbar.Text>
+                </Nav>
+                </Navbar>       
         </div>
     );
 };
