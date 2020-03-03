@@ -4,12 +4,26 @@ import Form from 'react-bootstrap/Form'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
+import API from '../Utils/API'
 
 class UserForm extends React.Component {
-    state = {}
+    state = {
+        users: []
+    }
 
 
-componentDidMount() {}
+componentDidMount() {
+    this.loadUsers();
+}
+
+loadUsers = () => {
+    API.getUsers()
+    .then(res => {
+        this.setState({ users: res.data });
+    })
+    .catch(err => console.log(err));
+console.log(this.state);
+}
 
 handleInputChange = e => {
     const { name, value } = e.target;
@@ -18,6 +32,29 @@ handleInputChange = e => {
     });
     console.log(value);
 };
+
+createUserPage = e => {
+    e.preventDefault();
+    API.createUser({
+        userName: this.state.userName,
+        profilePic: this.state.profilePic,
+        backgroundImg: this.state.backgroundImg,
+        summary: this.state.summary,
+        photoUrlOne: this.state.photoUrlOne,
+        photoOneCaption: this.state.photoOneCaption,
+        photoUrlTwo:this.state.photoUrlTwo,
+        photoTwoCaption: this.state.photoTwoCaption,
+        photoUrlThree: this.state.photoUrlThree,
+        photoThreeCaption: this.state.photoThreeCaption
+        goals: this.state.goals,
+        accomplishments: this.state.accomplishments,
+        hobbies: this.state.hobbies,
+        skills:this.state.skills
+    })
+    .then(res => this.loadUsers())
+    .catch(err => console.log(err));
+    console.log("this works")
+}
 
 
 render () {
@@ -44,7 +81,7 @@ render () {
                              type="text" 
                              name="profilePic" 
                              onChange={this.handleInputChange}
-                             value={this.state.userName}
+                             value={this.state.profilePic}
                             />
                     </Form.Group>
                     <Form.Group>
@@ -71,10 +108,9 @@ render () {
                         <Form.Label>Photo 1</Form.Label>
                             <Form.Control
                              type="text" 
-                             name="photoUrl"
-                             placeholder="Photo 1"  
+                             name="photoUrlOne" 
                              onChange={this.handleInputChange}
-                            //  value={this.state.photoUrlOne.url}
+                             value={this.state.photoUrlOne}
                             />
                     </Form.Group>
                     <Form.Group as={Col}>
@@ -82,9 +118,8 @@ render () {
                             <Form.Control
                              type="text" 
                              name="caption"
-                             placeholder="Photo 1"  
                              onChange={this.handleInputChange}
-                            //  value={this.state.photoUrlOne.caption}
+                             value={this.state.photoOneCaption}
                             />
                     </Form.Group>
                     </Form.Row>
@@ -93,10 +128,9 @@ render () {
                         <Form.Label>Photo 2</Form.Label>
                             <Form.Control
                              type="text" 
-                             name="photoUrl"
-                             placeholder="Photo 1"  
+                             name="photoUrlTwo"
                              onChange={this.handleInputChange}
-                            //  value={this.state.photoUrlOne.url}
+                             value={this.state.photoUrlTwo}
                             />
                     </Form.Group>
                     <Form.Group as={Col}>
@@ -105,7 +139,7 @@ render () {
                              type="text" 
                              name="caption" 
                              onChange={this.handleInputChange}
-                            //  value={this.state.photoUrlOne.caption}
+                             value={this.state.photoTwoCaption}
                             />
                     </Form.Group>
                     </Form.Row>
@@ -114,10 +148,9 @@ render () {
                         <Form.Label>Photo 3</Form.Label>
                             <Form.Control
                              type="text" 
-                             name="photoUrl"
-                             placeholder="Photo 3"  
+                             name="photoUrlThree" 
                              onChange={this.handleInputChange}
-                            //  value={this.state.photoUrlOne.url}
+                             value={this.state.photoUrlThree}
                             />
                     </Form.Group>
                     <Form.Group as={Col}>
@@ -126,7 +159,7 @@ render () {
                              type="text" 
                              name="caption"
                              onChange={this.handleInputChange}
-                            //  value={this.state.photoUrlOne.caption}
+                             value={this.state.photoThreeCaption}
                             />
                     </Form.Group>
                     </Form.Row>
@@ -170,7 +203,9 @@ render () {
                              value={this.state.skills}
                             />
                     </Form.Group>
-                    <Button type="submit">Create Profile</Button>
+                    <Button type="submit"
+                    onClick={this.createUserPage}
+                    >Create Profile</Button>
                 </Form>
             </Container>
         </div>

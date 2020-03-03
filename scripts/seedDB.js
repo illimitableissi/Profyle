@@ -6,7 +6,8 @@ mongoose.connect(
     "mongodb+srv://iinegbedion:8Q1tHdVLHOCdLCvV@cluster0-uuy8n.azure.mongodb.net/Profyle"
 );
 
-const UserSeed = [{
+const userSeed = [
+    {
     userName: "",
     profilePic: "",
     backgroundImg: "",
@@ -27,12 +28,13 @@ const UserSeed = [{
     accomplishments: "",
     hobbies: "",
     skills: "",
-}]
+}
+]
 
 
 db.User
     .remove({})
-    .then(() => db.User.collection.insertMany(UserSeed))
+    .then(() => db.User.collection.insertMany(userSeed))
     .then(data => {
         console.log(data.result.n + " records inserted!");
         process.exit(0);

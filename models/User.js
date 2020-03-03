@@ -9,7 +9,7 @@ const UserSchema = new Schema({
     },
     profilePic: {
         type: String,
-        required: true,
+        required: false,
     },
     backgroundImg: {
         type: String,
@@ -20,19 +20,28 @@ const UserSchema = new Schema({
         required: true,
     },
     photoUrlOne: {
-        url: String,
-        caption: String,
-        posted: {type: Date, default: Date.now}
+        type: String,
+        required: false,
+    },
+    photoOneCaption: {
+        type: String,
+        required: false,
     },
     photoUrlTwo: {
-        url: String,
-        caption: String,
-        posted: {type: Date, default: Date.now}
+        type: String,
+        required: true,
+    },
+    photoTwoCaption: {
+        type: String,
+        required: false,
     },
     photoUrlThree: {
-        url: String,
-        caption: String,
-        posted: {type: Date, default: Date.now}
+        type: String,
+        required: true,
+    },
+    photoThreeCaption: {
+        type: String,
+        required: false,
     },
     goals: {
         type: String,
@@ -53,4 +62,4 @@ const UserSchema = new Schema({
 })
 
 const User = mongoose.model("User", UserSchema);
-module.exports = User
+module.exports = User;
