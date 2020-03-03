@@ -5,8 +5,8 @@ router.route("/")
     .get(userController.findAll)
     .post(userController.create);
 
-router.route("/:username")
-    .get(userController.findByUsername)
+router.route("/:userName")
+    .get(userController.findByUserName)
     .post(userController.update);
 
 module.exports = router;

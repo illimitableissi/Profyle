@@ -8,9 +8,15 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  findByUsername: function(req, res) {
+  findById: function(req, res) {
     db.User
-      .findById(req.params.userName)
+      .findById(req.params.id)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  findByUserName: function(req, res) {
+    db.User
+      .findOne({userName: req.params.userName})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

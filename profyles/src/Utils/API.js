@@ -6,7 +6,7 @@ getUsers: function() {
     return axios.get("/api/users")
 },
 
-getUsername: function(userName) {
+getUserName: function(userName) {
     return axios.get("/api/users/" + userName)
 },
 
